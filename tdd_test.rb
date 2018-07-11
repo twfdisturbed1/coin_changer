@@ -14,6 +14,15 @@ class TestCodes < Minitest::Test
         coins = {:quarter => "25"}
         assert_equal(coins[:quarter], "25")
     end
+    def test_if_dime_is_10()
+        coins = {:dime => "10"}
+        assert_equal(coins[:dime], "10")
+    end
+    def test_if_nickle_is_05()
+        coins = {:nickle => "05"}
+        assert_equal(coins[:nickle], "05")
+    end
+
 
 end
 
