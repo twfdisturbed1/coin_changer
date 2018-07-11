@@ -22,6 +22,10 @@ class TestCodes < Minitest::Test
         coins = {:nickle => "05"}
         assert_equal(coins[:nickle], "05")
     end
+    def test_if_penny_is_01()
+        coins = {:penny => "01"}
+        assert_equal(coins[:penny], "01")
+    end
 
 
 end
