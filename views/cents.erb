@@ -1,0 +1,27 @@
+<body bgcolor="black" text="white">
+<div align="center">
+<h1>Hello</h1>
+<hr color="red">
+<form method = "post" action = "get_change" >
+<input type = "text" name = "number_input">
+<input type = "submit" value = "Click here">
+</form>
+<% results.each_pair do |key, value| %>
+	<% if value > 0 %>
+		<% if value > 1 %>
+			<%= value %>
+				<% if key.to_s == "penny" && value > 1 %>
+				<%= key = "pennies" %>
+				<% elsif value > 1 %>
+				<%= key.to_s + "s" %> 
+				<% end %>
+		<% else %>
+			<%= value %>
+			<%= key %>
+		<% end %> 
+	<% end %>
+
+<% end %>
+</div>
+<hr color="#00FF00">
+</body>

@@ -1,18 +1,22 @@
+def coin_changer(amount)
+	coins = {:quarter => 0, :dime => 0, :nickel => 0, :penny => 0}
+	while amount >= 25 do
+		coins[:quarter] += 1
+		amount -= 25
+	end
+	while amount >= 10 do
+		coins[:dime] += 1
+		amount -= 10
+	end
+  while amount >= 5 do
+		coins[:nickel] += 1
+		amount -= 5
+	end
+  while amount >= 1 do
+		coins[:penny] += 1
+		amount -= 1
+	end
 
-class Coin_changer
-    def final(amount)
-     coins = {:quarter => 25, :dime => 10, :nickle => 05, :penny => 01}
-     change = []         
-      remaining_amount = amount
-      coins.each do |coin|
-        if ((remaining_amount/coin).to_int > 0)
-        then (remaining_amount/coin).to_int.times { change << coin }
-          puts "Remaining Amount: #{remaining_amount} | Coin: #{coin}"
-          remaining_amount = amount - change.inject(:+)
-        end 
-    end                         
-     puts "Amount #{amount} >> Coin_changer: #{change}\n\n"
-      return change
-    end
+coins
 end
 
