@@ -1,10 +1,27 @@
-<body bgcolor="black" text="white">
-<div align="center">
-<h1>Coin Changer</h1>
-<hr color="red">
+<head>
+		<title>Coin Changer</title>
+<link rel="stylesheet" type="text/css" href="/css/styles.css">
+<body>
+<header>
+  <h2>Coin Changer</h2>
+</header>
+<section>
+  <nav>
+    <ul>
+			<li><center><u><b>Menu</b></u></center></li>
+      <li><a href="#">Other Apps</a></li>
+      <li><a href="http://www.disturbedmedia.com">Disturbedmedia.com</a></li>
+			<li><a href="https://www.w3schools.com/">W3schools.com</a></li>
+		</ul>
+  </nav>
+<article>
+    <h1>Please enter your amount.</h1><br>
+		*Note you can enter numbers up to 10 charectors.<br>Anything else won't submit.
+			<hr color="orange">
 <form method = "post" action = "get_change" >
-<input type = "text" name = "number_input">
-<input type = "submit" value = "Click here">
+	<input type = "number" name = "number_input" maxlength = 10>
+			<hr color="orange">
+	<input type = "submit" value = "Click here">
 </form>
 <% results.each_pair do |key, value| %>
 	<% if value > 0 %>
@@ -20,8 +37,11 @@
 			<%= key %>
 		<% end %> 
 	<% end %>
-
 <% end %>
-</div>
-<hr color="#00FF00">
+  </article>
+</section>
+
+	<footer>
+	<p>App by : TWFDisturbed</p>
+	</footer>
 </body>
